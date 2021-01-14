@@ -13,8 +13,8 @@ a{
 }
 
 .header{
-	background:#bd6969;
-	color:#bd6969;
+	background:#6984bd;
+	color:#6971bd;
 	padding:30px;
 	text-align: center;
 	font-size:30px;
@@ -30,23 +30,23 @@ a{
 .menu a{
 	text-decoration: none;
 	color:#fff;
-	background:#bd6969;
+	background:#7ebd69;
 	padding:10px;
 }
 
 .menu a:hover{
-	background: #bd6969;
+	background: #69bd74;
 }
 
 .cuerpo{
-	background: #D5DBDB;
+	background: #377391;
    
 	padding:30px;
 	min-height:440px;
 }
 
 .footer{
-	background:#735656 ;
+	background:#617356 ;
 	color:#aaa;
 	text-align:center;
 	font-size:10px;
@@ -104,8 +104,8 @@ a{
 }
 
 .carritot{
-	background:#2471A3;
-	color:white;
+	background:#39a324;
+	color:rgb(23, 18, 120);
 	padding:10px;
 	border-radius:4px 4px 0px 0px;
 	position:fixed;

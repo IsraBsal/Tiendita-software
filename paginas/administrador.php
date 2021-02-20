@@ -19,14 +19,14 @@
 		<a href="?p=agregar_producto"> 
 			<button class="btn btn-primary"><i class="fa fa-plus-circle"></i> Agregar Productos</button></a>
 
-			<a href="?p=agregar_categoriaquitar">
+			<a href="?p=agregar_categoria">
 			<button class="btn btn-info"><i class="fa fa-plus-circle"></i> Agregar Categoria</button></a>
 
-			<a href="?p=manejar_trackingquitar">
+			<a href="?p=manejar_tracking">
 			<button class="btn btn-warning"><i class="fa fa-plus-circle"></i> Manejar Tracking</button></a>
 			<br><br>
 
-			<a href="?p=eliminar_productoquitar">
+			<a href="?p=eliminar_producto">
 			<button class="btn btn-primary"><i class="fa fa-plus-circle"></i>Eliminar Productos</button></a>
 
 			

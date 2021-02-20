@@ -25,7 +25,7 @@ if(!isset($p)){
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
-	<title>Candy shop</title>
+	<title>Dulceria de cine</title>
 </head>
 <body>
         
@@ -49,7 +49,7 @@ if(!isset($p)){
 		if(isset($_SESSION['IdCliente'])){
 		?>
 		<a href="?p=productos">Productos</a> 
-		<!--<a href="?p=ofertas">Ofertas</a> -->
+		<a href="?p=ofertas">Ofertas</a> 
                 <a href="?p=carrito">Mi Carrito</a>
 		<a href="?p=miscompras">Mis Compras</a> 
                 <?php

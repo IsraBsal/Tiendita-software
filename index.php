@@ -31,13 +31,13 @@ if(!isset($p)){
         
         <div id="contenedor">
 			<div id="izq">
-				<img src="imagenes/logo_bd1.png" width="80" height="80" >
+				<img src="imagenes/logo_bd11.png" width="80" height="80" >
 			</div>
 			<div align="center">
 			<h1></h1>
 			<h2></h2>
 			<h3></h3>
-			<font SIZE=10>Candy Planet</font>
+			<font SIZE=10>Dulceria Cine</font>
 		</div>
 		
 	</div>
@@ -48,10 +48,10 @@ if(!isset($p)){
 		<?php
 		if(isset($_SESSION['IdCliente'])){
 		?>
-		<a href="?p=productos">Productos</a>
-		<a href="?p=ofertas">Ofertas</a>
+		<a href="?p=productos">Productos</a> 
+		<!--<a href="?p=ofertas">Ofertas</a> -->
                 <a href="?p=carrito">Mi Carrito</a>
-		<a href="?p=miscompras">Mis Compras</a>
+		<a href="?p=miscompras">Mis Compras</a> 
                 <?php
 		}else{
 			?>
@@ -61,7 +61,7 @@ if(!isset($p)){
 			<?php
 		}
 		?>
-		<a href="?p=administrador">Panel Admin</a>
+		<a href="?p=administrador">Interfaz vendedor</a>
 		
 		<?php
 			if(isset($_SESSION['IdCliente'])){

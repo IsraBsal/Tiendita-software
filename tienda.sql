@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 24, 2019 at 02:10 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Host: localhost
+-- Generation Time: Feb 20, 2021 at 11:10 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `tienda`
 --
-CREATE DATABASE IF NOT EXISTS `tienda` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `tienda`;
 
 -- --------------------------------------------------------
 
@@ -95,10 +92,10 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`IdCategoria`, `NombreCategoria`, `Descripcion`) VALUES
-(1, 'Paletas', 'Dulce con palillo xd'),
-(2, 'Chicles', 'Goma de mascar'),
-(3, 'Papas', 'Papas horneadas'),
-(4, 'Chetos', 'Frituras ');
+(1, 'Palomitas', 'Palomitas de maiz'),
+(2, 'Refrescos', 'Bebida de cola'),
+(3, 'Nachos', 'Nachos'),
+(4, 'Combos', 'Combinacion de productos');
 
 -- --------------------------------------------------------
 
@@ -214,14 +211,11 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`IdProducto`, `NombreProducto`, `Marca`, `IdCategoria`, `CantidadUnidades`, `Precio_Caja`, `Stock`, `UnidadesEnPedido`, `Suspendido`, `Imagen`, `oferta`) VALUES
-(100, 'Papas naturales', 'Sabritas', 3, 30, 150.00, 160, 0, 'No', 'sabritas_original.jpg', 0),
-(101, 'Chicle de menta', 'bubalu', 2, 20, 50.00, 130, 0, 'No', 'bubalu_menta.jpg', 20),
-(102, 'Mini Paleta Payaso', 'Ricolino', 1, 20, 200.00, 10, 0, 'No', '784.jpg', 0),
-(103, 'Papas de Limon', 'Sabritas', 3, 12, 100.00, 12, 0, 'No', '490.jpg', 0),
-(104, 'Crack ups', 'Bubbaloo', 2, 20, 150.00, 100, 0, 'No', '596.jpg', 0),
-(105, 'Rebanadita', 'Candy pop', 1, 12, 30.00, 10, 0, 'No', '583.jpg', 0),
-(106, 'Tarrito', 'Vero', 1, 40, 25.00, 30, 0, 'No', '837.jpg', 0),
-(107, 'Paleta de cajeta', 'Coronado ', 1, 15, 25.00, 100, 0, 'No', '696.jpg', 10);
+(100, 'Nachos con queso grandes', 'Cine', 3, 30, 80.00, 30, 0, 'No', '100.png', 0),
+(101, 'Coca Col Grande', 'Cola', 2, 20, 30.00, 20, 0, 'No', '101.png', 20),
+(102, 'Palomitas chicas', 'Cine', 1, 20, 30.00, 10, 0, 'No', '102.png', 0),
+(103, 'Nachos con queso medianos', 'Cine', 3, 12, 40.00, 12, 0, 'No', '103.png', 0),
+(104, 'Coca Col Mediana', 'Cola', 2, 20, 15.00, 100, 0, 'No', '104.png', 0);
 
 -- --------------------------------------------------------
 
@@ -366,13 +360,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `carro`
 --
 ALTER TABLE `carro`
-  MODIFY `IdCarro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `IdCarro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `pagos`
@@ -384,7 +378,7 @@ ALTER TABLE `pagos`
 -- AUTO_INCREMENT for table `productos_compra`
 --
 ALTER TABLE `productos_compra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `usuarios`

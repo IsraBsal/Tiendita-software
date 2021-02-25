@@ -14,7 +14,7 @@ $nombre = $rc['Nombre'];
 Fecha: <?=fecha($r['fecha'])?><br>
 Monto: <?=number_format($r['monto'])?> <?=$divisa?><br>
 Estado: <?=estado($r['estado'])?><br>
-Calificacion: <?=calificacion($r['calificacion'])?><br>
+<!--Calificacion: <?=calificacion($r['calificacion'])?><br>-->
 <br>
 <table class="table table-striped">
 	<tr>

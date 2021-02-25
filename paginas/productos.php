@@ -3,9 +3,9 @@ check_user("productos");
 if(isset($cat)){
 	$sc = mysqli_query($enlace,"SELECT * FROM categorias WHERE IdCategoria = '$cat'");
 	$rc = mysqli_fetch_array($sc);
-	?>
-	<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
-	<?php
+?>
+<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
+<?php
 }
 if(isset($agregar) && isset($cant)){
 	$idp = clear($agregar);
@@ -18,7 +18,7 @@ if(isset($agregar) && isset($cant)){
 	}else{
 		$q = mysqli_query($enlace,"INSERT INTO carro (IdCliente,IdProducto,cant) VALUES ($id_cliente,$idp,$cant)");
 	}
-	alert("Se ha agregado al carro de compras",1,'productos');
+	alert("Se ha agregado al carro de compras",1,'manejar_tracking');
 	//redir("?p=productos");
 }
 if(isset($busq) && isset($cat)){

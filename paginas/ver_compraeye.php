@@ -51,9 +51,10 @@ Estado: <?=estado($r['estado'])?><br>
 
 if(estado($r['estado']) == "Solicitado"){
 	?>
-	<a class="btn btn-primary" href="?p=pagar_compra&id=<?=$r['id']?>">
-		Pagar
+	<a class="btn btn-primary" href="?p=miscompras"> <!-- "?p=pagar_compra&id=<?//=$r['id']?>"-->
+		Pagar en caja (Proximamente)
 	</a>
+
 	<?php
 }
     

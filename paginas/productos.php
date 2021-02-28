@@ -18,7 +18,7 @@ if(isset($agregar) && isset($cant)){
 	}else{
 		$q = mysqli_query($enlace,"INSERT INTO carro (IdCliente,IdProducto,cant) VALUES ($id_cliente,$idp,$cant)");
 	}
-	alert("Se ha agregado al carro de compras",1,'manejar_tracking');
+	alert("Se ha agregado al carro de compras",1,'productos');
 	//redir("?p=productos");
 }
 if(isset($busq) && isset($cat)){

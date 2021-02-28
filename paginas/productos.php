@@ -98,8 +98,12 @@ while($r=mysqli_fetch_array($q)){
 	
 	function agregar_carro(idp){
 		var cant = prompt("¿Que cantidad desea agregar?",1);
-		if(cant.length>0){
+		if( cant.length>0 && !(typeof cant === 'string') ){
 			window.location="?p=productos&agregar="+idp+"&cant="+cant;
 		}
+		else{
+			alert("Valor invalido, intentalo de nuevo.");
+		}
+		
 	}
 </script>

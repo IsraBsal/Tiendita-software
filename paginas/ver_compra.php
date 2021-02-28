@@ -16,10 +16,10 @@ Estado: <?=estado($r['estado'])?><br>
 <br>
 <table class="table table-striped">
 	<tr>
-		<th>Nombre del producto</th>
-		<th>Cantidad</th>
-		<th>Monto</th>
-		<th>Monto Total</th>
+		<th style="background-color:#FFFFFF">Nombre del producto</th>
+		<th style="background-color:#FFFFFF">Cantidad</th>
+		<th style="background-color:#FFFFFF">Monto</th>
+		<th style="background-color:#FFFFFF">Monto Total</th>
 	</tr>
 	<?php
 		$sp = mysqli_query($enlace,"SELECT * FROM productos_compra WHERE IdCompra = '$id'");
@@ -30,10 +30,10 @@ Estado: <?=estado($r['estado'])?><br>
 			$montototal = $rp['monto'] * $rp['cantidad'];
 			?>
 				<tr>
-					<td><?=$nombre_producto?></td>
-					<td><?=$rp['cantidad']?></td>
-					<td><?=$rp['monto']?></td>
-					<td><?=$montototal?></td>
+					<td style="background-color:#FFFFFF"><?=$nombre_producto?></td>
+					<td style="background-color:#FFFFFF"><?=$rp['cantidad']?></td>
+					<td style="background-color:#FFFFFF"><?=$rp['monto']?></td>
+					<td style="background-color:#FFFFFF"><?=$montototal?></td>
 				</tr>
 			<?php
 		}

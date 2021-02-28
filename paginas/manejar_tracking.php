@@ -18,11 +18,11 @@
 
 <table class="table table-stripe">
 	<tr>
-		<th>Cliente</th>
-		<th>Fecha</th>
-		<th>Monto</th>
-		<th>Status</th>
-		<th>Acciones</th>
+		<th style="background-color:#FFFFFF">Cliente</th>
+		<th style="background-color:#FFFFFF">Fecha</th>
+		<th style="background-color:#FFFFFF">Monto</th>
+		<th style="background-color:#FFFFFF">Status</th>
+		<th style="background-color:#FFFFFF">Acciones</th>
 	</tr>
 
 		
@@ -70,20 +70,20 @@
 		$fecha = fecha($r['fecha']);
 		?>
 		<tr>
-			<td><?=$cliente?></td>
-			<td><?=$fecha?></td>
-			<td><?=$r['monto']?> <?=$divisa?></td>
-			<td><?=$status?></td>
-			<td>
-				<a tittle="Eliminar registro" style="color:#ffffff" href="?p=manejar_tracking&eliminar=<?=$r['id']?>">
+			<td style="background-color:#FFFFFF"><?=$cliente?></td>
+			<td style="background-color:#FFFFFF"><?=$fecha?></td>
+			<td style="background-color:#FFFFFF"><?=$r['monto']?> <?=$divisa?></td>
+			<td style="background-color:#FFFFFF"><?=$status?></td>
+			<td style="background-color:#FFFFFF">
+				<a tittle="Eliminar registro" style="color:#000000" href="?p=manejar_tracking&eliminar=<?=$r['id']?>">
 					<i >Eliminar Registro</i>
 				</a>
 				&nbsp; &nbsp;
-				<a tittle="Editar Status" style="color:#ffffff" href="?p=manejar_status&id=<?=$r['id']?>">
+				<a tittle="Editar Status" style="color:#000000" href="?p=manejar_status&id=<?=$r['id']?>">
 					Editar status
 				</a>
 				&nbsp; &nbsp;
-				<a  tittle="Ver compra"style="color:#ffffff" href="?p=ver_compra&id=<?=$r['id']?>">
+				<a  tittle="Ver compra"style="color:#000000" href="?p=ver_compra&id=<?=$r['id']?>">
 					<i >Ver compra</i>
 				</a>
 			</td>

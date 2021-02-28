@@ -3,9 +3,9 @@ check_user("productos");
 if(isset($cat)){
 	$sc = mysqli_query($enlace,"SELECT * FROM categorias WHERE IdCategoria = '$cat'");
 	$rc = mysqli_fetch_array($sc);
-	?>
-	<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
-	<?php
+?>
+<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
+<?php
 }
 if(isset($agregar) && isset($cant)){
 	$idp = clear($agregar);
@@ -98,8 +98,12 @@ while($r=mysqli_fetch_array($q)){
 	
 	function agregar_carro(idp){
 		var cant = prompt("¿Que cantidad desea agregar?",1);
-		if(cant.length>0){
+		if( cant.length>0 && !(typeof cant === 'string') ){
 			window.location="?p=productos&agregar="+idp+"&cant="+cant;
 		}
+		else{
+			alert("Valor invalido, intentalo de nuevo.");
+		}
+		
 	}
 </script>

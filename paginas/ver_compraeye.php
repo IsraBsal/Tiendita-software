@@ -9,12 +9,12 @@ $sc = mysqli_query($enlace,"SELECT * FROM usuarios WHERE IdCliente = '".$r['IdCl
 $rc = mysqli_fetch_array($sc);
 $nombre = $rc['Nombre'];
 ?>
-<h1>Viendo compra #<span style="color:#08f"><?=$r['id']?></span></h1><br>
+<h1>Viendo compra #<span style="color:#FFFFFF"><?=$r['id']?></span></h1><br>
 
 Fecha: <?=fecha($r['fecha'])?><br>
 Monto: <?=number_format($r['monto'])?> <?=$divisa?><br>
 Estado: <?=estado($r['estado'])?><br>
-Calificacion: <?=calificacion($r['calificacion'])?><br>
+<!--Calificacion: <?=calificacion($r['calificacion'])?><br>-->
 <br>
 <table class="table table-striped">
 	<tr>

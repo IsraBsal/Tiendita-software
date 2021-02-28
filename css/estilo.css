@@ -63,9 +63,10 @@ a{
 	display:inline-table;
 	width:13%;
 	padding:5px;
-	background: rgba(0,0,0,0.05);
+	background: rgba(0, 0, 0, 0.05);
 	color:#333;
 	margin:30px;
+	background-color: #ffffff;
 }
 
 .img_producto{
@@ -86,7 +87,7 @@ a{
 }
 
 .precio{
-	color:#17202A ;
+	color:#000000 ;
 	padding:20px;
 }
 

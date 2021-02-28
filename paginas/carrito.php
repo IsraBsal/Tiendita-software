@@ -51,14 +51,14 @@ if(isset($finalizar)){
 
 <table class="table table-striped">
 	<tr>
-		<th><i>Imagen</i></th>
-		<th>Nombre del producto</th>
-		<th>Cantidad</th>
-		<th>Precio por unidad</th>
-		<th>Oferta</th>
-		<th>Precio Total</th>
-		<th>Precio Neto</th>
-		<th>Acciones</th>
+		<th style="background-color:#FFFFFF"><i>Imagen</i></th>
+		<th style="background-color:#FFFFFF">Nombre del producto</th>
+		<th style="background-color:#FFFFFF">Cantidad</th>
+		<th style="background-color:#FFFFFF">Precio por unidad</th>
+		<th style="background-color:#FFFFFF">Oferta</th>
+		<th style="background-color:#FFFFFF">Precio Total</th>
+		<th style="background-color:#FFFFFF">Precio Neto</th>
+		<th style="background-color:#FFFFFF">Acciones</th>
 	    
 	    
 	</tr>
@@ -95,11 +95,11 @@ while($r = mysqli_fetch_array($q)){
 	
 	?>
 		<tr>
-			<td><img src="imagenes/<?=$imagen_producto?>" class="imagen_carro" width="60" height="60"/></td>
-			<td><?=$nombre_producto?></td>
-			<td><?=$cantidad?></td>
-			<td><?=$precio_unidad?> <?=$divisa?></td>
-			<td>
+			<td style="background-color:#FFFFFF"><img src="imagenes/<?=$imagen_producto?>" class="imagen_carro" width="60" height="60"/></td>
+			<td style="background-color:#FFFFFF"><?=$nombre_producto?></td>
+			<td style="background-color:#FFFFFF"><?=$cantidad?></td>
+			<td style="background-color:#FFFFFF"><?=$precio_unidad?> <?=$divisa?></td>
+			<td style="background-color:#FFFFFF">
 				<?php
 					if($r2['oferta']>0){
 						echo $r2['oferta']."% de Descuento";
@@ -108,9 +108,9 @@ while($r = mysqli_fetch_array($q)){
 					}
 				?>
 			</td>
-			<td><?=$preciototal?> <?=$divisa?></td>
-			<td><?=$precio_total?> <?=$divisa?></td>
-			<td>
+			<td style="background-color:#FFFFFF"><?=$preciototal?> <?=$divisa?></td>
+			<td style="background-color:#FFFFFF"><?=$precio_total?> <?=$divisa?></td>
+			<td style="background-color:#FFFFFF">
 				<a onclick="modificar('<?=$r['IdCarro']?>')" href="#"><i class="fa fa-edit" title="Modificar cantidad en carrito"></i></a>
 				<a href="?p=carrito&eliminar=<?=$r['IdCarro']?>"><i class="fa fa-times" title="Eliminar"></i></a>
 			</td>

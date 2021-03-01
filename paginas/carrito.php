@@ -131,9 +131,12 @@ while($r = mysqli_fetch_array($q)){
 <script type="text/javascript">
 		
 	function modificar(idc){
-		var new_cant = prompt("¿Cual es la nueva cantidad?");
-		if(new_cant>0){
+		var new_cant = new Number(prompt("¿Cual es la nueva cantidad?"));
+		if(new_cant>0 && (new_cant instanceof Number)){
 			window.location="?p=carrito&id="+idc+"&modificar="+new_cant;
+		}
+		else{
+			alert("Error, introduce un valor valido");
 		}
 	}
 </script>

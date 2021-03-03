@@ -37,9 +37,9 @@ if(isset($busq) && isset($cat)){
 	<form method="post" action="">
 		<div class="row">
 			<div class="col-md-5">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<input type="text" class="form-control" name="busq" placeholder="Coloca el nombre del producto"/>
-				</div>
+				</div>-->
 			</div>
 			<div class="col-md-5">
 				<select id="categoria" name="cat" class="form-control">

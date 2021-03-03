@@ -52,22 +52,24 @@ if(estado($r['estado']) == "Solicitado"){
 		Pagar en caja (Proximamente)
 	</a>
 
-	<?php
-}
-    
-if($r['estado'] != 4){
-	?>
 	<a class="btn btn-primary" href="?p=cancelar_compra&id=<?=$r['id']?>">
         Cancelar
 	</a>
+
+	<?php
+}
+    
+if($r['estado'] != 1){
+	?>
+	
 	<?php
 }
 
-if($r['estado'] == 3 ){
+if($r['estado'] == "Pagado" ){
         ?>
-        <a class="btn btn-primary" href="?p=evaluar_compra&id=<?=$r['id']?>">
+        <!--<a class="btn btn-primary" href="?p=evaluar_compra&id=<?=$r['id']?>">
             Evaluar Compra
-        </a>
+        </a>-->
         <?php
     }
     

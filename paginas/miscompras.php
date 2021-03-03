@@ -38,7 +38,7 @@ if(mysqli_num_rows($s)>0){
                     if(estado($r['estado']) == "Pagado" or estado($r['estado']) == "Enviado"){
                         ?>
                             
-                            &nbsp; &nbsp; <a title="Cancelar" href="?p=cancelar_compra&id=<?=$r['id']?>"><b>Cancelar</b></a>
+                            <!--&nbsp; &nbsp; <a title="Cancelar" href="?p=cancelar_compra&id=<?=$r['id']?>"><b>Cancelar</b></a>-->
                         <?php
                     }
                     

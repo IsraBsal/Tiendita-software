@@ -37,5 +37,21 @@ Estado: <?=estado($r['estado'])?><br>
 				</tr>
 			<?php
 		}
+		if(estado($r['estado']) == "Solicitado"){
+			?>	
+				<a class="btn btn-primary" href="?p=pagar_compra_vendedor&id=<?=$r['id']?>">
+					Pagar
+				</a>
+
+				<a class="btn btn-primary" href="?p=cancelar_compra_vendedor&id=<?=$r['id']?>">
+					Cancelar
+				</a>
+
+			<?php
+		}
+	
+	
 	?>
+
+	
 </table>

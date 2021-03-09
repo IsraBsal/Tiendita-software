@@ -3,9 +3,9 @@ check_user("productos");
 if(isset($cat)){
 	$sc = mysqli_query($enlace,"SELECT * FROM categorias WHERE IdCategoria = '$cat'");
 	$rc = mysqli_fetch_array($sc);
-	?>
-	<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
-	<?php
+?>
+<h1>Categoria Filtrada por: <?=$rc['NombreCategoria']?></h1>
+<?php
 }
 if(isset($agregar) && isset($cant)){
 	$idp = clear($agregar);
@@ -37,9 +37,9 @@ if(isset($busq) && isset($cat)){
 	<form method="post" action="">
 		<div class="row">
 			<div class="col-md-5">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<input type="text" class="form-control" name="busq" placeholder="Coloca el nombre del producto"/>
-				</div>
+				</div>-->
 			</div>
 			<div class="col-md-5">
 				<select id="categoria" name="cat" class="form-control">
@@ -97,9 +97,12 @@ while($r=mysqli_fetch_array($q)){
 <script type="text/javascript">
 	
 	function agregar_carro(idp){
-		var cant = prompt("¿Que cantidad desea agregar?",1);
-		if(cant.length>0){
+		var cant = new Number(prompt("¿Que cantidad desea agregar?",1));
+		if( cant>0 && (cant instanceof Number) ){
 			window.location="?p=productos&agregar="+idp+"&cant="+cant;
+		}
+		else{
+			alert("Error, introduce un valor valido");
 		}
 	}
 </script>

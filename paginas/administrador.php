@@ -16,7 +16,7 @@
 	}
 	if(isset($_SESSION['idadmin'])){ // si hay una sesion iniciada
 		?>
-		<a href="?p=agregar_producto">
+		<a href="?p=agregar_producto"> 
 			<button class="btn btn-primary"><i class="fa fa-plus-circle"></i> Agregar Productos</button></a>
 
 			<a href="?p=agregar_categoria">

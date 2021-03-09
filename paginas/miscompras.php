@@ -8,10 +8,10 @@ if(mysqli_num_rows($s)>0){
 
 	<table class="table table-stripe">
 		<tr>
-			<th>Fecha</th>
-			<th>Monto</th>
-			<td>Estado</td>
-			<td>Acciones</td>
+			<th style="background-color:#FFFFFF"> Fecha </th>
+			<th style="background-color:#FFFFFF">Monto</th>
+			<td style="background-color:#FFFFFF">Estado</td>
+			<td style="background-color:#FFFFFF">Acciones</td>
 		</tr>
 		
 		
@@ -20,10 +20,10 @@ if(mysqli_num_rows($s)>0){
 	while($r=mysqli_fetch_array($s)){
 		?>
 		<tr>
-			<td><?=fecha($r['fecha'])?></td>
-			<td><?=number_format($r['monto'])?> <?=$divisa?></td>
-			<td><?=estado($r['estado'])?></td>
-			<td>
+			<td style="background-color:#FFFFFF"><?=fecha($r['fecha'])?></td>
+			<td style="background-color:#FFFFFF"><?=number_format($r['monto'])?> <?=$divisa?></td>
+			<td style="background-color:#FFFFFF"><?=estado($r['estado'])?></td>
+			<td style="background-color:#FFFFFF">
 				<a title="ver" href="?p=ver_compraeye&id=<?=$r['id']?>">
 					Ver compra
 				</a>
@@ -38,7 +38,7 @@ if(mysqli_num_rows($s)>0){
                     if(estado($r['estado']) == "Pagado" or estado($r['estado']) == "Enviado"){
                         ?>
                             
-                            &nbsp; &nbsp; <a title="Cancelar" href="?p=cancelar_compra&id=<?=$r['id']?>"><b>Cancelar</b></a>
+                            <!--&nbsp; &nbsp; <a title="Cancelar" href="?p=cancelar_compra&id=<?=$r['id']?>"><b>Cancelar</b></a>-->
                         <?php
                     }
                     

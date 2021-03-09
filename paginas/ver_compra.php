@@ -7,19 +7,19 @@ $sc = mysqli_query($enlace,"SELECT * FROM usuarios WHERE IdCliente = '".$r['IdCl
 $rc = mysqli_fetch_array($sc);
 $nombre = $rc['Nombre'];
 ?>
-<h1>Viendo compra de <span style="color:#08f"><?=$nombre?></span></h1><br>
+<h1>Viendo compra de <span style="color:#ffffff"><?=$nombre?></span></h1><br>
 
 Fecha: <?=fecha($r['fecha'])?><br>
 Monto: <?=number_format($r['monto'])?> <?=$divisa?><br>
 Estado: <?=estado($r['estado'])?><br>
-Calificacion: <?=calificacion($r['calificacion'])?><br>
+<!--Calificacion: <?=calificacion($r['calificacion'])?><br>-->
 <br>
 <table class="table table-striped">
 	<tr>
-		<th>Nombre del producto</th>
-		<th>Cantidad</th>
-		<th>Monto</th>
-		<th>Monto Total</th>
+		<th style="background-color:#FFFFFF">Nombre del producto</th>
+		<th style="background-color:#FFFFFF">Cantidad</th>
+		<th style="background-color:#FFFFFF">Monto</th>
+		<th style="background-color:#FFFFFF">Monto Total</th>
 	</tr>
 	<?php
 		$sp = mysqli_query($enlace,"SELECT * FROM productos_compra WHERE IdCompra = '$id'");
@@ -30,12 +30,28 @@ Calificacion: <?=calificacion($r['calificacion'])?><br>
 			$montototal = $rp['monto'] * $rp['cantidad'];
 			?>
 				<tr>
-					<td><?=$nombre_producto?></td>
-					<td><?=$rp['cantidad']?></td>
-					<td><?=$rp['monto']?></td>
-					<td><?=$montototal?></td>
+					<td style="background-color:#FFFFFF"><?=$nombre_producto?></td>
+					<td style="background-color:#FFFFFF"><?=$rp['cantidad']?></td>
+					<td style="background-color:#FFFFFF"><?=$rp['monto']?></td>
+					<td style="background-color:#FFFFFF"><?=$montototal?></td>
 				</tr>
 			<?php
 		}
+		if(estado($r['estado']) == "Solicitado"){
+			?>	
+				<a class="btn btn-primary" href="?p=pagar_compra_vendedor&id=<?=$r['id']?>">
+					Pagar
+				</a>
+
+				<a class="btn btn-primary" href="?p=cancelar_compra_vendedor&id=<?=$r['id']?>">
+					Cancelar
+				</a>
+
+			<?php
+		}
+	
+	
 	?>
+
+	
 </table>
